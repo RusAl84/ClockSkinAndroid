@@ -134,6 +134,15 @@ public class MainActivity extends AppCompatActivity {
         MultipartBody.Part body = MultipartBody.Part.createFormData("file", "image.jpg", requestFile);
         Call<Response> call = retrofitInterface.uploadImage(body);
         mProgressBar.setVisibility(View.VISIBLE);
+//        try
+//        {
+//            Thread.sleep(10000);
+//        }
+//        catch(InterruptedException ex)
+//        {
+//            Thread.currentThread().interrupt();
+//        }
+
         call.enqueue(new Callback<Response>() {
             @Override
             public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
