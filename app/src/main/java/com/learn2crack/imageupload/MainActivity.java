@@ -145,8 +145,9 @@ public class MainActivity extends AppCompatActivity {
                     Response responseBody = response.body();
                     mBtImageShow.setVisibility(View.VISIBLE);
                     //mImageUrl = URL + responseBody.getPath();
-                    mImageUrl =  "http://10.0.2.2:5000/upload/image.jpg";
-                    Snackbar.make(findViewById(R.id.content), responseBody.getMessage(),Snackbar.LENGTH_SHORT).show();
+                    mImageUrl =  "http://10.0.2.2:5000/static/image.jpg";
+                    Snackbar.make(findViewById(R.id.content), mImageUrl, Snackbar.LENGTH_SHORT).show();
+                    //Snackbar.make(findViewById(R.id.content), responseBody.getMessage(),Snackbar.LENGTH_SHORT).show();
 
                 } else {
 
